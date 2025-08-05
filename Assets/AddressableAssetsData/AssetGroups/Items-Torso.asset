@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Items-Torso
+  m_EditorClassIdentifier: 
+  m_GroupName: Items-Torso
+  m_GUID: 6873b6260fd4c394b908c33de84adf13
+  m_SerializeEntries:
+  - m_GUID: 1bac8d7a5db71d049a94c43a361ea36e
+    m_Address: Tank Top (M)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2eb41adc55dfec64db9f7b2cc725e16c
+    m_Address: Tank Top (F)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 389d0161bbba868468f287d916d2f615
+    m_Address: Long Sleeve Shirt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bd491ca90f86b54a90dce8285072777
+    m_Address: Simple Shirt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d09406775acad5144afffe76e660f03b
+    m_Address: Dress
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b43bca8e11b58f64a8191220a729ee44, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 42de2747604586e488340ed987e32ecf, type: 2}
+    - {fileID: 11400000, guid: c73f86fb34c2d9c408883a8351986d72, type: 2}

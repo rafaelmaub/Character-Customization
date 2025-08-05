@@ -13,6 +13,7 @@ public class EquipData : ScriptableObject, IIdentifier
 
     [Header("Visuals")]
     [SerializeField] private Mesh itemMesh;
+    [SerializeField] private Material[] materials;
 
     [Header("Debug")]
     [SerializeField] private int _id;
