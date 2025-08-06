@@ -1,6 +1,3 @@
-using UnityEditor.AddressableAssets.Settings;
-using UnityEngine.AddressableAssets;
-
 using UnityEngine;
 
 
@@ -32,8 +29,9 @@ public class UIEquipsTabsControl : UITabControl<ListData>
 
     public void OpenTab(int index)
     {
-        Debug.Log("Opening tab " + allTabs[index].name);
-
+        ListData listSelected = allTabs[index];
+        Debug.Log("Opening tab " + listSelected.name);
+        AddressLoadControl.Instance.LoadAssets(listSelected.ListContent);
         //Display items in the UI after clicking
         //Load addressables
     }
