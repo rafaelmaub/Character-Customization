@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312bcb328dc3ac74ab6730e3596d900e, type: 3}
+  m_Name: Clothes_Torso
+  m_EditorClassIdentifier: 
+  listName: Top
+  listDescription: 
+  iconography: {fileID: 0}
+  listContent: {fileID: 11400000, guid: f54c736f7381a694e8304f26319e61c9, type: 2}

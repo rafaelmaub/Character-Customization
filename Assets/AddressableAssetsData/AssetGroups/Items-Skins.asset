@@ -14,7 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Items-Skins
   m_GUID: 14607264d887b89478feba18c401813c
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 2dccd69b1cbf2504eaf99cc3d36f75dd
+    m_Address: Fresnel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fb1b4ef05a7084459475aa0686d58c9
+    m_Address: Ghost Skin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78e3d5f8dda2d0d42a4efbe26fa7209c
+    m_Address: Normal Skin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cfd6f0a69b119a147b36bbab3ddce59d
+    m_Address: Metallic Skin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b43bca8e11b58f64a8191220a729ee44, type: 2}
   m_SchemaSet:

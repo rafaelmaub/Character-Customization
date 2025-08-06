@@ -14,7 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Items-Shoes
   m_GUID: 2e4254f415c2fca4a978746c25267c07
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 199b222072272c54abd72b710d3b9ce5
+    m_Address: Red Sneakers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 689ae6632ac36bb4a8944f05d7ea90b3
+    m_Address: Shoeless
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83cb4a95a89136745a9fe9de627d962e
+    m_Address: Black Sneakers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9860c4aa60388442a4587693e63ff8c
+    m_Address: Blue Sneakers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b43bca8e11b58f64a8191220a729ee44, type: 2}
   m_SchemaSet:

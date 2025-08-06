@@ -9,7 +9,7 @@ public class DatabaseManager
     [MenuItem("Tools/Rebuild Items ID")]
     public static void AssignIDsToScriptableObjects()
     {
-        string folderPath = "Assets/Data Objects";
+        string folderPath = "Assets/Data Objects/Game Items";
 
         if (!Directory.Exists(folderPath))
         {

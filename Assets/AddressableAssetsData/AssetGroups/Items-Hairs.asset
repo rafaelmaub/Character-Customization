@@ -14,7 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Items-Hairs
   m_GUID: 05a72b8ef311cb240b51fcb71f2dbf9b
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 768c23e99f97ae642a729a68a61180e4
+    m_Address: Long Hair
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89a5aba57e930b14abe53bb9c7e31eb1
+    m_Address: Spike Hair
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a91674e64754324297add1855563fe2
+    m_Address: Short Hair
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca40d51552075a34cbd24594c9c1445c
+    m_Address: Ponytail
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbaf793c6a5f2fe488a2d93b92c1a2f9
+    m_Address: Messy Hair
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b43bca8e11b58f64a8191220a729ee44, type: 2}
   m_SchemaSet:
