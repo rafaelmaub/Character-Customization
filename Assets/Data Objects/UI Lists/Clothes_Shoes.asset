@@ -15,4 +15,5 @@ MonoBehaviour:
   listName: Shoes
   listDescription: 
   iconography: {fileID: 0}
-  listContent: {fileID: 11400000, guid: fe6adccd72fd94b439335691195ac0c4, type: 2}
+  listContentLabel:
+    m_LabelString: equip-shoes

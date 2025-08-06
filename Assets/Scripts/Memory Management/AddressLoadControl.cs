@@ -1,19 +1,38 @@
 using System.Collections.Generic;
-using UnityEditor.AddressableAssets.Settings;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 public class AddressLoadControl : Singleton<AddressLoadControl>
 {
     [SerializeField] private List<ScriptableObject> loadedObjects = new List<ScriptableObject>();
-
-    public ScriptableObject[] LoadAssets(AddressableAssetGroup group)
+    private Dictionary<string, ScriptableObject> loadedAddresses = new Dictionary<string, ScriptableObject>();
+    public ScriptableObject[] LoadAssets(AssetLabelReference group)
     {
-        foreach(AddressableAssetEntry entry in group.entries)
+
+        Addressables.LoadAssetsAsync<ScriptableObject>(group, LoadedItemCallBack).Completed += (asset =>
         {
-            Debug.Log(entry.address);
-        }
+            
+            //asset.Release();
+        });
 
         return null;
+    }
+
+    private void LoadedItemCallBack(ScriptableObject so)
+    {
+        Debug.Log("Added " + so.name);
+        loadedObjects.Add(so);
+
+
+    }
+
+    private void OnDestroy()
+    {
+        //foreach(ScriptableObject loadedObject in loadedObjects)
+        //{
+        //    Destroy(loadedObject);
+        //}
+
+        //loadedObjects.Clear();
     }
 }

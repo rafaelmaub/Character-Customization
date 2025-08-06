@@ -7,6 +7,7 @@ public class UIEquipsTabsControl : UITabControl<ListData>
     private void Start()
     {
         SpawnTabs();
+
     }
 
 
@@ -31,6 +32,8 @@ public class UIEquipsTabsControl : UITabControl<ListData>
     {
         ListData listSelected = allTabs[index];
         Debug.Log("Opening tab " + listSelected.name);
+
+        
         AddressLoadControl.Instance.LoadAssets(listSelected.ListContent);
         //Display items in the UI after clicking
         //Load addressables

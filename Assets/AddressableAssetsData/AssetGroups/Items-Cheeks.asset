@@ -19,30 +19,35 @@ MonoBehaviour:
     m_Address: Shy Cheek
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-cheek
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3e6f3148404b52e4a99d7e6edaf421b9
     m_Address: Super Shy cheek
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-cheek
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6f3871148a7b60745ba33dbd621c273a
     m_Address: No Cheek
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-cheek
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 76342e8df61679f4cace1bc17a3c690a
     m_Address: Weird Cheek
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-cheek
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b203c302ff72f7147ae7c29b38b546c0
     m_Address: Freckles Cheek
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-cheek
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0

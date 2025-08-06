@@ -1,4 +1,4 @@
-using UnityEditor.AddressableAssets.Settings;
+using UnityEngine.AddressableAssets;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item List Data", menuName = "Scriptable Objects/List Data")]
@@ -9,10 +9,10 @@ public class ListData : ScriptableObject
 
     [SerializeField] private Sprite iconography;
 
-    [SerializeField] private AddressableAssetGroup listContent;
+    [SerializeField] private AssetLabelReference listContentLabel;
 
 
     public string ListName => listName;
     public Sprite ListIcon => iconography;
-    public AddressableAssetGroup ListContent => listContent;
+    public AssetLabelReference ListContent => listContentLabel;
 }

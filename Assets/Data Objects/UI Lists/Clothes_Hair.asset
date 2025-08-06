@@ -15,4 +15,5 @@ MonoBehaviour:
   listName: Hair
   listDescription: 
   iconography: {fileID: 0}
-  listContent: {fileID: 11400000, guid: cbc0b8a11da3b654e8dc9e1a722b5ca5, type: 2}
+  listContentLabel:
+    m_LabelString: equip-hair

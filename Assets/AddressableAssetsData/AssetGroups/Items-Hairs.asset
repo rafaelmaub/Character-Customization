@@ -19,30 +19,35 @@ MonoBehaviour:
     m_Address: Long Hair
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-hair
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 89a5aba57e930b14abe53bb9c7e31eb1
     m_Address: Spike Hair
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-hair
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8a91674e64754324297add1855563fe2
     m_Address: Short Hair
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-hair
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ca40d51552075a34cbd24594c9c1445c
     m_Address: Ponytail
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-hair
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dbaf793c6a5f2fe488a2d93b92c1a2f9
     m_Address: Messy Hair
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-hair
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0

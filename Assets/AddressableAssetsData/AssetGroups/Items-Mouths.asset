@@ -19,72 +19,84 @@ MonoBehaviour:
     m_Address: Mouth 1
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 13c1af07738ce8149bcd7c7e6e9b457d
     m_Address: Mouth 6
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 15a7a9917cfd0914a9c96643124b208e
     m_Address: Mouth 8
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b7c1da428e66c7458a3190d8799f2a7
     m_Address: Mouth 2
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5efa2c6f322be9d47974559b71f79eda
     m_Address: Mouth 11
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 737c736e9db767d49a693204dd269e9a
     m_Address: Mouth 7
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7442d0cdc0617b64298823cce2940455
     m_Address: Mouth 12
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e0539a9f557ac3409af4b6ff8e465f6
     m_Address: Mouth 4
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f5246268cd93b345b20ccdb76d0ad43
     m_Address: Mouth 3
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1afffe920c8b8e459c0fb56a66d5e6e
     m_Address: Mouth 5
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cbc13d2e53d5fd74aaf128b10e2bb8d3
     m_Address: Mouth 9
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e674cdcb35536e64e930acd6c3f1fbda
     m_Address: Mouth 10
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-mouth
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 9e858f56bffb72c4d8e22f775e492682
   m_currentHash:
     serializedVersion: 2
-    Hash: 356c9a32a9e748a33dd59a0ca9747398
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -108,6 +108,14 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - equipment
+    - equip-cheek
+    - equip-torso
+    - equip-shoes
+    - equip-skin
+    - equip-hair
+    - equip-mouth
+    - equip-eye
+    - equip-leg
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 894ff5e8f79d0a4449d26e4503cff75a, type: 2}

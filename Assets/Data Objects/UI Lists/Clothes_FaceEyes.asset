@@ -15,4 +15,5 @@ MonoBehaviour:
   listName: Eyes
   listDescription: 
   iconography: {fileID: 0}
-  listContent: {fileID: 11400000, guid: 53f3a1ec626f02a4aa795811352c6b43, type: 2}
+  listContentLabel:
+    m_LabelString: equip-eye

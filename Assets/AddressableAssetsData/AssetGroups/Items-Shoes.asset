@@ -19,24 +19,28 @@ MonoBehaviour:
     m_Address: Red Sneakers
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-shoes
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 689ae6632ac36bb4a8944f05d7ea90b3
     m_Address: Shoeless
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-shoes
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 83cb4a95a89136745a9fe9de627d962e
     m_Address: Black Sneakers
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-shoes
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c9860c4aa60388442a4587693e63ff8c
     m_Address: Blue Sneakers
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-shoes
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0

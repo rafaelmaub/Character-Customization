@@ -19,30 +19,35 @@ MonoBehaviour:
     m_Address: Tank Top (M)
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-torso
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2eb41adc55dfec64db9f7b2cc725e16c
     m_Address: Tank Top (F)
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-torso
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 389d0161bbba868468f287d916d2f615
     m_Address: Long Sleeve Shirt
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-torso
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8bd491ca90f86b54a90dce8285072777
     m_Address: Simple Shirt
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-torso
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d09406775acad5144afffe76e660f03b
     m_Address: Dress
     m_ReadOnly: 0
     m_SerializedLabels:
+    - equip-torso
     - equipment
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0

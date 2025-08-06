@@ -15,4 +15,5 @@ MonoBehaviour:
   listName: Mouth
   listDescription: 
   iconography: {fileID: 0}
-  listContent: {fileID: 11400000, guid: 383f87e41a94fa54b8843ea7c774a018, type: 2}
+  listContentLabel:
+    m_LabelString: equip-mouth

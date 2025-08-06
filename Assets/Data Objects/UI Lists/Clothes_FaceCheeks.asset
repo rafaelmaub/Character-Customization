@@ -15,4 +15,5 @@ MonoBehaviour:
   listName: Cheeks
   listDescription: 
   iconography: {fileID: 0}
-  listContent: {fileID: 11400000, guid: 6b2612fca1c7b5045a4767c04c1a12e0, type: 2}
+  listContentLabel:
+    m_LabelString: equip-cheek
