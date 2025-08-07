@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Eye 15
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 0}
-  materials:
-  - {fileID: 2100000, guid: 5561dccb10934554fac1b58133f85fcf, type: 2}
+  equipName: Eye 15
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: -7436983501766067125, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
+    materials:
+    - {fileID: 2100000, guid: 5561dccb10934554fac1b58133f85fcf, type: 2}
+    customColor: 0
   _id: 0
+  _hideItem: 0

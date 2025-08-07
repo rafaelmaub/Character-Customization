@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Metallic Skin
   m_EditorClassIdentifier: 
-  itemName: Metallic
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 0}
-  materials:
-  - {fileID: 2100000, guid: b1457b8d21ee3aa42a11b9dd92f624e1, type: 2}
-  customColor: 0
+  equipName: Metallic Skin
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: -3752837355321727987, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
+    materials:
+    - {fileID: 2100000, guid: b1457b8d21ee3aa42a11b9dd92f624e1, type: 2}
+    customColor: 1
   _id: 0
   _hideItem: 0

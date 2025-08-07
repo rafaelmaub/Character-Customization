@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Messy Hair
   m_EditorClassIdentifier: 
-  itemName: Messy Hair
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: -2567650555017132842, guid: 85fb5d0c561b4d14589b52ce9c8c6d58, type: 3}
-  materials:
-  - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
-  customColor: 1
+  equipName: Messy Hair
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: -2567650555017132842, guid: 85fb5d0c561b4d14589b52ce9c8c6d58, type: 3}
+    materials:
+    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    customColor: 0
   _id: 0
+  _hideItem: 0

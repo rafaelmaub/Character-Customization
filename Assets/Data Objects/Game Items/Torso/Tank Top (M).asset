@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Tank Top (M)
   m_EditorClassIdentifier: 
-  itemName: Tank Top (M)
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 100
-  itemMesh: {fileID: 0}
+  equipName: Tank Top (M)
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: 6797482241241196863, guid: 7db1f4cabfba9ce49b3482663dadff47, type: 3}
+    materials:
+    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    customColor: 1
   _id: 0
+  _hideItem: 0

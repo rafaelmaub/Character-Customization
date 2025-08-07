@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Underwear
   m_EditorClassIdentifier: 
-  itemName: Underwear
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 3706787030221485303, guid: b5da32f9bb031e54c8fd9c4442208aff, type: 3}
-  materials:
-  - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
-  customColor: 1
+  equipName: Underwear
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: 3706787030221485303, guid: b5da32f9bb031e54c8fd9c4442208aff, type: 3}
+    materials:
+    - {fileID: 2100000, guid: 6f3baad1ba5aaf04e86a7608e1b80306, type: 2}
+    customColor: 0
   _id: 0
+  _hideItem: 0

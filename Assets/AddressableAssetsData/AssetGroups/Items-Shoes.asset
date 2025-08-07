@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 2e4254f415c2fca4a978746c25267c07
   m_SerializeEntries:
   - m_GUID: 199b222072272c54abd72b710d3b9ce5
-    m_Address: Red Sneakers
+    m_Address: Green Sneakers
     m_ReadOnly: 0
     m_SerializedLabels:
     - equip-shoes

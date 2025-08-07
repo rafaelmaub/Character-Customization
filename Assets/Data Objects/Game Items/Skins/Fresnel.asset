@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Fresnel
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 0}
+  equipName: Fresnel
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  equipMesh: {fileID: 0}
   materials: []
   customColor: 0
   _id: 0

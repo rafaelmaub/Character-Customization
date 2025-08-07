@@ -13,9 +13,7 @@ public class EquipData : ScriptableObject, IIdentifier
     [SerializeField] protected int equipValue;
 
     [Header("Visuals")]
-    [SerializeField] private Mesh equipMesh;
-    [SerializeField] private Material[] materials;
-    [SerializeField] private bool customColor;
+    [SerializeField] protected EquipVisual visual;
 
     [Header("Debug")]
     [SerializeField] private int _id;
@@ -24,12 +22,28 @@ public class EquipData : ScriptableObject, IIdentifier
     public int ID { get => _id; set => SetID(value); }
     public bool HideItem => _hideItem;
 
+
     public string EquipName => equipName;
     public int Value => equipValue;
     public Sprite Icon => equipIcon;
+
+    public EquipVisual Visual => visual;
+
 
     public void SetID(int id)
     {
         _id = id;
     }
+}
+
+[System.Serializable]
+public class EquipVisual
+{
+    [SerializeField] private Mesh equipMesh;
+    [SerializeField] private Material[] materials;
+    [SerializeField] private bool customColor;
+
+    public Mesh EquipMesh => equipMesh;
+    public Material[] Materials => materials;
+    public bool CustomColor => customColor;
 }

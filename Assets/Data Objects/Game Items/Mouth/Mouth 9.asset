@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Mouth 9
   m_EditorClassIdentifier: 
-  itemName: Mouth 9
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 4879913901367622219, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
-  materials:
-  - {fileID: 2100000, guid: 4ab52f7b65e6f3e46990b3682508bcb9, type: 2}
-  customColor: 0
+  equipName: Mouth9
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: 4879913901367622219, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
+    materials: []
+    customColor: 0
   _id: 0
+  _hideItem: 1

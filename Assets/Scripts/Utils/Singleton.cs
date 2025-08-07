@@ -17,6 +17,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Destroy(singleton.gameObject); //Or GameObject as appropriate
             return;
         }
-        _instance = (T)FindObjectOfType(typeof(T));
+
+        _instance = GetComponent<T>();
     }
 }

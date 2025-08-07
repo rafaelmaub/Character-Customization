@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Dress
   m_EditorClassIdentifier: 
-  itemName: Dress
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 100
-  itemMesh: {fileID: 0}
+  equipName: Dress
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: 4545171529854758045, guid: b7bb9efc083a4a54288b3537e9e60264, type: 3}
+    materials:
+    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    customColor: 1
   _id: 0
+  _hideItem: 0

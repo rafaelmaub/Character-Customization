@@ -23,7 +23,7 @@ public class AddressLoadControl : Singleton<AddressLoadControl>
             {
                 individualItemCallback.Invoke(handle.Result);
             }
-            
+
 
             Addressables.Release(handle);
         }

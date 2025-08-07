@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Super Shy cheek
   m_EditorClassIdentifier: 
-  itemName: Super Shy Cheek
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 6318000105373616581, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
-  materials:
-  - {fileID: 2100000, guid: dcc55f0dba0ee15499ba334a3371aa3b, type: 2}
+  equipName: Super Shy cheek
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: 6318000105373616581, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
+    materials:
+    - {fileID: 2100000, guid: dcc55f0dba0ee15499ba334a3371aa3b, type: 2}
+    customColor: 0
   _id: 0
+  _hideItem: 0

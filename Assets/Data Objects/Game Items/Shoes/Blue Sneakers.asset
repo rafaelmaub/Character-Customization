@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13d683fbf49f04d920b0dee9a29529, type: 3}
   m_Name: Blue Sneakers
   m_EditorClassIdentifier: 
-  itemName: Blue Sneakers
-  itemDescription: 
-  itemIcon: {fileID: 0}
-  itemValue: 0
-  itemMesh: {fileID: 5433102353385186542, guid: e7ff3f6cd86a3c548819184f4c0aa178, type: 3}
-  materials:
-  - {fileID: 2100000, guid: edd428596987a9043a6a214c30629650, type: 2}
-  customColor: 0
+  equipName: Blue Sneakers
+  equipDescription: 
+  equipIcon: {fileID: 0}
+  equipValue: 0
+  visual:
+    equipMesh: {fileID: 5433102353385186542, guid: e7ff3f6cd86a3c548819184f4c0aa178, type: 3}
+    materials:
+    - {fileID: 2100000, guid: edd428596987a9043a6a214c30629650, type: 2}
+    customColor: 0
   _id: 0
+  _hideItem: 0
