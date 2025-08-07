@@ -1,38 +1,37 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.ResourceLocations;
+using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class AddressLoadControl : Singleton<AddressLoadControl>
 {
-    [SerializeField] private List<ScriptableObject> loadedObjects = new List<ScriptableObject>();
-    private Dictionary<string, ScriptableObject> loadedAddresses = new Dictionary<string, ScriptableObject>();
-    public ScriptableObject[] LoadAssets(AssetLabelReference group)
+    public async Awaitable LoadAssetsAsync(AssetLabelReference group, Action<ScriptableObject> individualItemCallback)
     {
-
-        Addressables.LoadAssetsAsync<ScriptableObject>(group, LoadedItemCallBack).Completed += (asset =>
+        IList<IResourceLocation> locations = await Addressables.LoadResourceLocationsAsync(group).Task;
+        
+        foreach (IResourceLocation location in locations)
         {
+            var handle = Addressables.LoadAssetAsync<ScriptableObject>(location);
+            await handle.Task;
+           
+
+            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            {
+                individualItemCallback.Invoke(handle.Result);
+            }
             
-            //asset.Release();
-        });
 
-        return null;
-    }
-
-    private void LoadedItemCallBack(ScriptableObject so)
-    {
-        Debug.Log("Added " + so.name);
-        loadedObjects.Add(so);
-
+            Addressables.Release(handle);
+        }
 
     }
 
     private void OnDestroy()
     {
-        //foreach(ScriptableObject loadedObject in loadedObjects)
-        //{
-        //    Destroy(loadedObject);
-        //}
 
-        //loadedObjects.Clear();
     }
 }

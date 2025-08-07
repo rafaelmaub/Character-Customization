@@ -1,15 +1,14 @@
-using UnityEngine;
-
+using System;
 
 public class UIEquipsTabsControl : UITabControl<ListData>
 {
+    public Action<ListData> OnTabSelected;
 
     private void Start()
     {
         SpawnTabs();
 
     }
-
 
     protected override void SpawnTabs()
     {
@@ -30,13 +29,12 @@ public class UIEquipsTabsControl : UITabControl<ListData>
 
     public void OpenTab(int index)
     {
-        ListData listSelected = allTabs[index];
-        Debug.Log("Opening tab " + listSelected.name);
 
-        
-        AddressLoadControl.Instance.LoadAssets(listSelected.ListContent);
-        //Display items in the UI after clicking
-        //Load addressables
+        ListData listSelected = allTabs[index];
+        OnTabSelected?.Invoke(listSelected);
     }
+
+
+
 
 }

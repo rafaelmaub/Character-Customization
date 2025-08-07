@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class UIItemButton : MonoBehaviour
+public class UIEquipButton : MonoBehaviour
 {
     [SerializeField] private Image itemIconDisplay;
     [SerializeField] private TextMeshProUGUI itemNameDisplay;
@@ -9,15 +9,15 @@ public class UIItemButton : MonoBehaviour
     private EquipData equipment;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public void InitializeButton(EquipData equip)
     {
-        
+        equipment = equip;
+
+        itemNameDisplay.text = equip.name;
+        itemPriceDisplay.text = equip.Value.ToString();
+
+        itemIconDisplay.sprite = equip.Icon;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
