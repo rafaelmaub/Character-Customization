@@ -9,7 +9,10 @@ using System.Collections.Generic;
 public class PlayerData : Singleton<PlayerData>
 {
     [SerializeField] private List<string> ownedEquips_Path;
-    [SerializeField] private List<string> currentEquips;
+    public List<EquipData> ownedEquips { get; private set; }
+
+    [SerializeField] private List<string> currentEquips_Path;
+    public List<EquipData> currentEquips { get; private set; }
 
 
 

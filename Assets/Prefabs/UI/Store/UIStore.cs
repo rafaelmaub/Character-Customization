@@ -1,5 +1,6 @@
 using GameEconomy;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIStore : MonoBehaviour
@@ -8,6 +9,8 @@ public class UIStore : MonoBehaviour
     [SerializeField] private Button buyButton;
 
     private UIEquipButton selectedEquipButton;
+
+    public UnityEvent<EquipData> OnEquipHighlighted;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +29,8 @@ public class UIStore : MonoBehaviour
         {
             buyButton.gameObject.SetActive(true);
             buyButton.interactable = CurrencyManager.CurrentCoin >= btn.LinkedEquip.Value;
+
+            OnEquipHighlighted.Invoke(btn.LinkedEquip);
         }
         else
         {

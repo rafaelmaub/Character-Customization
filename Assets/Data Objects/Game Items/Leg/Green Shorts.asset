@@ -21,5 +21,6 @@ MonoBehaviour:
     materials:
     - {fileID: 2100000, guid: 543adaf4bd77faa4da43dfff66d4c98c, type: 2}
     customColor: 0
+    equipType: 6
   _id: 0
   _hideItem: 0

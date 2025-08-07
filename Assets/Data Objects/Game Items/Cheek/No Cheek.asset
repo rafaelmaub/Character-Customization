@@ -20,5 +20,6 @@ MonoBehaviour:
     equipMesh: {fileID: 0}
     materials: []
     customColor: 0
+    equipType: 1
   _id: 0
   _hideItem: 0
