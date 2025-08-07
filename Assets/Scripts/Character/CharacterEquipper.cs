@@ -2,29 +2,18 @@ using UnityEngine;
 
 public class CharacterEquipper : MonoBehaviour
 {
-    [SerializeField] private EquipData currentHair;
-    [SerializeField] private EquipData currentEye;
-    [SerializeField] private EquipData currentMouth;
-    [SerializeField] private EquipData currentCheek;
-    [SerializeField] private EquipData currentTorso;
-    [SerializeField] private EquipData currentLeg;
-    [SerializeField] private EquipData currentShoes;
+    [SerializeField] private CharacterBodyPart[] bodyParts;
 
-
-    public void ChangeHair(EquipData newHair)
+    public void ChangeEquipOnBodyPart(EquipData data)
     {
-
-    }
-
-
-    public void ChangeEye(EquipData newHair)
-    {
-
-    }
-
-
-    public void ChangeCheek(EquipData newHair)
-    {
-
+        //Either this or a switch, but a Switch statement is less open to code expansion
+        foreach (CharacterBodyPart part in bodyParts) 
+        {
+            if(part.IsItemCompatible(data))
+            {
+                part.ChangeEquipment(data);
+                return;
+            }
+        }
     }
 }

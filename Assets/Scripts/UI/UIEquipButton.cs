@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class UIEquipButton : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Image equipIconDisplay;
     [SerializeField] private TextMeshProUGUI equipNameDisplay;
     [SerializeField] private TextMeshProUGUI equipPriceDisplay;
 
     protected EquipData equipment;
 
-
+    public Action<UIEquipButton> OnEquipmentButtonClicked;
+    public EquipData LinkedEquip => equipment;
 
     public void InitializeButton(EquipData equip)
     {
@@ -24,6 +27,7 @@ public class UIEquipButton : MonoBehaviour
     public virtual void Equipment_BtnClicked()
     {
         Debug.Log("Accessing equipment " + equipment.EquipName);
+        OnEquipmentButtonClicked?.Invoke(this);
     }
 
 }

@@ -4,15 +4,9 @@ public class CharacterBodyPart : MonoBehaviour
 {
     
     [SerializeField] private SkinnedMeshRenderer bodyRenderer;
+    [SerializeField] private EquipType equipCompatibility;
     
-    private CharacterEquipper equipper;
-
     [SerializeField] private EquipData currentData;
-
-    private void Start()
-    {
-        ChangeEquipment(currentData);
-    }
 
     public void ChangeEquipment(EquipData newData)
     {
@@ -32,6 +26,12 @@ public class CharacterBodyPart : MonoBehaviour
         currentData = newData;
     }
 
+
+    public bool IsItemCompatible(EquipData data)
+    {
+        //NOTE: Maybe this method could be used for other compatibilities like gender, size, even level?
+        return data.Visual.EquipType == equipCompatibility;
+    }
 }
 
 

@@ -5,7 +5,6 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceLocations;
-using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class AddressLoadControl : Singleton<AddressLoadControl>
 {
@@ -29,7 +28,21 @@ public class AddressLoadControl : Singleton<AddressLoadControl>
         }
 
     }
+    public async Awaitable LoadAssetAsync(string address, Action<ScriptableObject> individualItemCallback)
+    {
+        var handle = Addressables.LoadAssetAsync<ScriptableObject>(address);
+        await handle.Task;
 
+
+        if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+        {
+            individualItemCallback.Invoke(handle.Result);
+        }
+
+
+        Addressables.Release(handle);
+
+    }
     private void OnDestroy()
     {
 

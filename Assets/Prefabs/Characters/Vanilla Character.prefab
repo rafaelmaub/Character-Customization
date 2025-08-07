@@ -76,6 +76,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6520798976215967140}
     - targetCorrespondingSourceObject: {fileID: -2128304588410707618, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5379091741842294340}
@@ -124,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 6623715030702528391}
+  equipCompatibility: 6
   currentData: {fileID: 11400000, guid: ea4ee2d02e3fff748ab5642284b25e75, type: 2}
 --- !u!137 &491464113449290919 stripped
 SkinnedMeshRenderer:
@@ -158,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 1925171619346159901}
+  equipCompatibility: 2
   currentData: {fileID: 11400000, guid: 06a3ba9d55cec1f4dab96ce26cd58c28, type: 2}
 --- !u!1 &2995641656284683417 stripped
 GameObject:
@@ -177,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 2033497604966614895}
+  equipCompatibility: 5
   currentData: {fileID: 11400000, guid: 8bd491ca90f86b54a90dce8285072777, type: 2}
 --- !u!1 &3830321016334303389 stripped
 GameObject:
@@ -196,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 5558470434636384553}
+  equipCompatibility: 0
   currentData: {fileID: 11400000, guid: dbaf793c6a5f2fe488a2d93b92c1a2f9, type: 2}
 --- !u!1 &4775722427018851341 stripped
 GameObject:
@@ -215,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 4945130827576976491}
+  equipCompatibility: 4
   currentData: {fileID: 11400000, guid: 78e3d5f8dda2d0d42a4efbe26fa7209c, type: 2}
 --- !u!137 &4945130827576976491 stripped
 SkinnedMeshRenderer:
@@ -249,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 320899233629770768}
+  equipCompatibility: 1
   currentData: {fileID: 11400000, guid: 6f3871148a7b60745ba33dbd621c273a, type: 2}
 --- !u!1 &6331190069534703865 stripped
 GameObject:
@@ -268,7 +277,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 491464113449290919}
+  equipCompatibility: 7
   currentData: {fileID: 11400000, guid: 83cb4a95a89136745a9fe9de627d962e, type: 2}
+--- !u!1 &6602241021360135314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
+  m_PrefabInstance: {fileID: 6295670451350004163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6520798976215967140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6602241021360135314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a408112974f581c48afceff90bbb2c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyParts:
+  - {fileID: 5379091741842294340}
+  - {fileID: 3958000616124420575}
+  - {fileID: 5831714325325539968}
+  - {fileID: 5258762852763858395}
+  - {fileID: 3204957533063526246}
+  - {fileID: 6953025104863592982}
+  - {fileID: 974853431245692745}
+  - {fileID: 6136196511508626928}
 --- !u!137 &6623715030702528391 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 914968851292321348, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
@@ -292,4 +328,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyRenderer: {fileID: 5893075932575787127}
+  equipCompatibility: 3
   currentData: {fileID: 11400000, guid: d2c9af90233eb2c46b64024a29bac305, type: 2}

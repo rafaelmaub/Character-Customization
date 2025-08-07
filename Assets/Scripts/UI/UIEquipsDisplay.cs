@@ -1,15 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIEquipsDisplay : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Transform parentContainer;
     [SerializeField] private UIEquipButton equipButtonPrefab;
     [SerializeField] private UIEquipsTabsControl tabControl;
 
-
     private List<UIEquipButton> spawnedButtons = new List<UIEquipButton>();
+
+    public Action<UIEquipButton> OnAnyEquipSelected;
 
     private void Awake()
     {
@@ -59,6 +62,7 @@ public class UIEquipsDisplay : MonoBehaviour
             UIEquipButton newEquip = Instantiate(equipButtonPrefab, parentContainer);
             spawnedButtons.Add(newEquip);
             newEquip.InitializeButton(equip);
+            newEquip.OnEquipmentButtonClicked += OnAnyEquipSelected;
         }
 
     }
@@ -69,6 +73,7 @@ public class UIEquipsDisplay : MonoBehaviour
 
         foreach (UIEquipButton btn in spawnedButtons)
         {
+            btn.OnEquipmentButtonClicked -= OnAnyEquipSelected;
             Destroy(btn.gameObject);
         }
 

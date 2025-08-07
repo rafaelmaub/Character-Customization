@@ -36,14 +36,3 @@ public class EquipData : ScriptableObject, IIdentifier
     }
 }
 
-[System.Serializable]
-public class EquipVisual
-{
-    [SerializeField] private Mesh equipMesh;
-    [SerializeField] private Material[] materials;
-    [SerializeField] private bool customColor;
-
-    public Mesh EquipMesh => equipMesh;
-    public Material[] Materials => materials;
-    public bool CustomColor => customColor;
-}
