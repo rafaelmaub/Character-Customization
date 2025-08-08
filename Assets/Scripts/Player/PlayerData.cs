@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
 using System.Linq;
 using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
 
 /// <summary>
 /// The PlayerData script works as some kind of local server
@@ -80,6 +82,42 @@ public class PlayerData : Singleton<PlayerData>
             currentEquips_Address.Add(current.ID);
             ownedEquips_Address.Add(current.ID);
         }
+    }
+
+    public async Awaitable HasItemAsync(string ID, Action<bool> callback)
+    {
+        bool has = false;
+        
+        await Task.Run(() =>
+        {
+            foreach (string owned in ownedEquips_Address)
+            {
+                if (owned == ID)
+                {
+                    has = true;
+                    break;
+                }
+            }
+        });
+
+        callback.Invoke(has);
+    }
+
+    public void AcquireNewItem(EquipData data)
+    {
+        ownedEquips_Address.Add(data.ID);
+
+        EquipData oldItem = currentEquips.Find(x => x.Visual.EquipType == data.Visual.EquipType);
+        CurrentEquips.Remove(oldItem);
+        currentEquips.Add(data);
+
+        currentEquips_Address.Clear();
+        foreach (EquipData currentEquip in currentEquips)
+        {
+            currentEquips_Address.Add(currentEquip.ID);
+        }
+
+        SaveData();
     }
 
 }

@@ -16,12 +16,7 @@ public class UIStore : MonoBehaviour
     void Start()
     {
         equipDisplay.OnAnyEquipSelected += SwitchSelectedEquipBtn;
-        //Tell 'equipDisplay' to only display items available to buy
-        //Maybe create an Enum that goes to AddressLoadControl
-        //
     }
-
-
 
     private void SwitchSelectedEquipBtn(UIEquipButton btn)
     {
@@ -39,5 +34,13 @@ public class UIStore : MonoBehaviour
         {
             buyButton.gameObject.SetActive(false);
         }
+    }
+
+    public void BuyEquip()
+    {
+        CurrencyManager.ChangeCoins(-selectedEquipButton.LinkedEquip.Value);
+        selectedEquipButton.SetButtonBougth();
+
+        PlayerData.Instance.AcquireNewItem(selectedEquipButton.LinkedEquip);
     }
 }

@@ -32,10 +32,12 @@ public class UIEquipsDisplay : MonoBehaviour
 
     private IEnumerator LoadEquipsCoroutine(ListData data)
     {
-        Awaitable asyncHandler = null;
+        Awaitable asyncHandler = AddressLoadControl.Instance.LoadAssetsAsync(data.ListContent, SpawnEquipButton);
 
         //Filter the display of items depending on an Enum
         //Could maybe be done with a more complex system of filters and conditions (Limited Edition equips, Owned, Not Owned, Rare/Common/Legendary equips)
+        
+        /*
         switch (displayFilter)
         {
             case LoadAssetFilter.PlayerOwned:
@@ -46,6 +48,7 @@ public class UIEquipsDisplay : MonoBehaviour
                 asyncHandler = AddressLoadControl.Instance.LoadAssetsAsync(data.ListContent, SpawnEquipButton);
                 break;
         }
+        */
 
         //Display Load/Download Icon somewhere in canvas
 
@@ -77,6 +80,16 @@ public class UIEquipsDisplay : MonoBehaviour
             spawnedButtons.Add(newEquip);
             newEquip.InitializeButton(equip);
             newEquip.OnEquipmentButtonClicked += OnAnyEquipSelected;
+
+
+            var awaitable = PlayerData.Instance.HasItemAsync(equip.ID, (has) =>
+            {
+                if(has)
+                {
+                    newEquip.SetButtonBougth();
+                }
+                
+            });
         }
 
     }
