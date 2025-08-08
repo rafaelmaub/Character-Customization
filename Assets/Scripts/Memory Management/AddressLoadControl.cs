@@ -14,6 +14,7 @@ public class AddressLoadControl : Singleton<AddressLoadControl>
         
         foreach (IResourceLocation location in locations)
         {
+            //Filter here?
             var handle = Addressables.LoadAssetAsync<ScriptableObject>(location);
             await handle.Task;
            
@@ -28,6 +29,33 @@ public class AddressLoadControl : Singleton<AddressLoadControl>
         }
 
     }
+
+    public async Awaitable LoadAssetsAsyncInList(AssetLabelReference group, List<string> addresses, Action<ScriptableObject> individualItemCallback)
+    {
+        IList<IResourceLocation> locations = await Addressables.LoadResourceLocationsAsync(group).Task;
+
+        foreach (IResourceLocation location in locations)
+        {
+            if(!addresses.Contains(location.PrimaryKey))
+            {
+                return;
+            }
+
+            var handle = Addressables.LoadAssetAsync<ScriptableObject>(location);
+            await handle.Task;
+
+
+            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            {
+                individualItemCallback.Invoke(handle.Result);
+            }
+
+
+            Addressables.Release(handle);
+        }
+
+    }
+
     public async Awaitable LoadAssetAsync(string address, Action<ScriptableObject> individualItemCallback)
     {
         var handle = Addressables.LoadAssetAsync<ScriptableObject>(address);
@@ -43,8 +71,5 @@ public class AddressLoadControl : Singleton<AddressLoadControl>
         Addressables.Release(handle);
 
     }
-    private void OnDestroy()
-    {
 
-    }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Simple Shirt
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -1716110407043338123, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
     materials:

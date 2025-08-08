@@ -16,6 +16,9 @@ public class UIStore : MonoBehaviour
     void Start()
     {
         equipDisplay.OnAnyEquipSelected += SwitchSelectedEquipBtn;
+        //Tell 'equipDisplay' to only display items available to buy
+        //Maybe create an Enum that goes to AddressLoadControl
+        //
     }
 
 

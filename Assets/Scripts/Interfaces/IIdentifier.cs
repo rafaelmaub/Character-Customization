@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IIdentifier
 {
-    public int ID { get; set; }
+    public string ID { get; set; }
 
-    public void SetID(int id);
+    public void SetID(string id);
 }

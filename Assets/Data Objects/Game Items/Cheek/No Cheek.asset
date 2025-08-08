@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: No Cheek
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: 0}
     materials: []

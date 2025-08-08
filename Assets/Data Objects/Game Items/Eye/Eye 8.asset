@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Eye 8
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -7436983501766067125, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
     materials:

@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Green Shorts
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -8429018785055073106, guid: 72f2b2e64600b674082997935b38ef61, type: 3}
     materials:

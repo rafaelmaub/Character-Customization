@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Underwear
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: 3706787030221485303, guid: b5da32f9bb031e54c8fd9c4442208aff, type: 3}
     materials:

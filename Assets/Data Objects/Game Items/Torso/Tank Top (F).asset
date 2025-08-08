@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Tank Top (F)
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -6201006056128192083, guid: 61c9a85b18292954790fded86a08f24e, type: 3}
     materials:

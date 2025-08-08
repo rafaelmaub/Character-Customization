@@ -15,11 +15,12 @@ MonoBehaviour:
   equipName: Spike Hair
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -1997072637900844015, guid: 0f970e43a3da4474abd8de0ec845cb38, type: 3}
     materials:
     - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
     customColor: 0
+    equipType: 0
   _id: 0
   _hideItem: 0

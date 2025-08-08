@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Mouth5
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: 4879913901367622219, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
     materials:

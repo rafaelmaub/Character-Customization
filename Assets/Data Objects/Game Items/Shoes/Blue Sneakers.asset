@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Blue Sneakers
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: 5433102353385186542, guid: e7ff3f6cd86a3c548819184f4c0aa178, type: 3}
     materials:

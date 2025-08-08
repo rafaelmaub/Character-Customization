@@ -9,6 +9,8 @@ public class UIEquipsDisplay : MonoBehaviour
     [SerializeField] private Transform parentContainer;
     [SerializeField] private UIEquipButton equipButtonPrefab;
     [SerializeField] private UIEquipsTabsControl tabControl;
+    [SerializeField] private LoadAssetFilter displayFilter;
+
 
     private List<UIEquipButton> spawnedButtons = new List<UIEquipButton>();
 
@@ -30,7 +32,21 @@ public class UIEquipsDisplay : MonoBehaviour
 
     private IEnumerator LoadEquipsCoroutine(ListData data)
     {
-        var asyncHandler = AddressLoadControl.Instance.LoadAssetsAsync(data.ListContent, SpawnEquipButton);
+        Awaitable asyncHandler = null;
+
+        //Filter the display of items depending on an Enum
+        //Could maybe be done with a more complex system of filters and conditions (Limited Edition equips, Owned, Not Owned, Rare/Common/Legendary equips)
+        switch (displayFilter)
+        {
+            case LoadAssetFilter.PlayerOwned:
+                asyncHandler = AddressLoadControl.Instance.LoadAssetsAsyncInList(data.ListContent, PlayerData.Instance.OwnedEquipIds, SpawnEquipButton);
+                break;
+            case LoadAssetFilter.NotPlayerOwned:
+            default:
+                asyncHandler = AddressLoadControl.Instance.LoadAssetsAsync(data.ListContent, SpawnEquipButton);
+                break;
+        }
+
         //Display Load/Download Icon somewhere in canvas
 
         while(!asyncHandler.IsCompleted)
@@ -46,8 +62,6 @@ public class UIEquipsDisplay : MonoBehaviour
 
 
             yield return null;
-            
-
         }
 
         //Hide Load Icon to indicate there are no more loading to be done

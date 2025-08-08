@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Ghost Skin
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -3752837355321727987, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
     materials:

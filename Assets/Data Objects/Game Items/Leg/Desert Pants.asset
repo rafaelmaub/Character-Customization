@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Desert Pants
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -5768860637884414165, guid: 7beff93e97437a1418caba3e75662a16, type: 3}
     materials:

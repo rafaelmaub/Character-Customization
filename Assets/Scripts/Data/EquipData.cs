@@ -16,10 +16,10 @@ public class EquipData : ScriptableObject, IIdentifier
     [SerializeField] protected EquipVisual visual;
 
     [Header("Debug")]
-    [SerializeField] private int _id;
+    [SerializeField] private string _id;
     [SerializeField] private bool _hideItem;
 
-    public int ID { get => _id; set => SetID(value); }
+    public string ID { get => _id; set => SetID(value); }
     public bool HideItem => _hideItem;
 
 
@@ -30,7 +30,7 @@ public class EquipData : ScriptableObject, IIdentifier
     public EquipVisual Visual => visual;
 
 
-    public void SetID(int id)
+    public void SetID(string id)
     {
         _id = id;
     }

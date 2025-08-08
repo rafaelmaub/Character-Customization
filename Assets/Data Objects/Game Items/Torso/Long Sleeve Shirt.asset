@@ -15,7 +15,7 @@ MonoBehaviour:
   equipName: Long Sleeve Shirt
   equipDescription: 
   equipIcon: {fileID: 0}
-  equipValue: 0
+  equipValue: 200
   visual:
     equipMesh: {fileID: -6932478202874304102, guid: 10ab6d36cac4464479ac44803e100221, type: 3}
     materials:

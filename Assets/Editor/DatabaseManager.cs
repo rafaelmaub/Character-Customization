@@ -9,7 +9,7 @@ public class DatabaseManager
     [MenuItem("Tools/Rebuild Items ID")]
     public static void AssignIDsToScriptableObjects()
     {
-        string folderPath = "Assets/Data Objects/Game Items";
+        string folderPath = EquipmentUtils.Source_Path;
 
         if (!Directory.Exists(folderPath))
         {
@@ -26,8 +26,10 @@ public class DatabaseManager
 
             if(so is IIdentifier identifier)
             {
-                identifier.SetID(i);
-                Debug.Log($"Assigned ID {i} to {so.name}");
+                assetPath = assetPath.Replace(folderPath, "").Replace(".asset", "");
+                identifier.SetID(assetPath);
+                //Debug.Log($"Assigned ID {i} to {so.name}");
+                Debug.Log(assetPath);
             }
 
             

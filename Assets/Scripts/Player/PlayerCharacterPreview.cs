@@ -12,7 +12,7 @@ public class PlayerCharacterPreview : MonoBehaviour
     public void RestoreCurrentEquipment()
     {
         //Get from PlayerData equipment
-        foreach(EquipData equip in PlayerData.Instance.currentEquips)
+        foreach(EquipData equip in PlayerData.Instance.CurrentEquips)
         {
             equipper.ChangeEquipOnBodyPart(equip);
         }
