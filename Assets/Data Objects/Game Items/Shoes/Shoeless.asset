@@ -22,5 +22,5 @@ MonoBehaviour:
     - {fileID: 0}
     customColor: 0
     equipType: 7
-  _id: 0
+  _id: Shoes/Shoeless
   _hideItem: 0

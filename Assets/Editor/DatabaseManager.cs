@@ -30,11 +30,15 @@ public class DatabaseManager
                 identifier.SetID(assetPath);
                 //Debug.Log($"Assigned ID {i} to {so.name}");
                 Debug.Log(assetPath);
+#if UNITY_EDITOR
+                
+                // ...
+                EditorUtility.SetDirty(so);
+#endif
             }
 
-            
-        }
 
+        }
 
         AssetDatabase.SaveAssets(); // Save all pending asset changes
         Debug.Log("ScriptableObject ID assignment complete.");
