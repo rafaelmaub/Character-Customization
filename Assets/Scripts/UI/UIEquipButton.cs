@@ -10,7 +10,10 @@ public class UIEquipButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI equipNameDisplay;
     [SerializeField] private TextMeshProUGUI equipPriceDisplay;
 
-    protected EquipData equipment;
+    private bool owned;
+    private EquipData equipment;
+
+    public bool Owned => owned;
 
     public Action<UIEquipButton> OnEquipmentButtonClicked;
     public EquipData LinkedEquip => equipment;
@@ -37,6 +40,7 @@ public class UIEquipButton : MonoBehaviour
         equipPriceDisplay.text = "OWNED";
         equipPriceDisplay.color = Color.green;
         equipPriceDisplay.transform.GetChild(0)?.gameObject.SetActive(false);
+        owned = true;
 
     }
 

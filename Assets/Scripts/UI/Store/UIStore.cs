@@ -5,9 +5,20 @@ using UnityEngine.UI;
 
 public class UIStore : MonoBehaviour
 {
-    [SerializeField] private UIEquipsDisplay equipDisplay;
+    [SerializeField] private UIEquipsDisplay equipDisplay;  
     [SerializeField] private Button buyButton;
 
+    private PlayerCharacterPreview CharacterPreview 
+    { 
+        get 
+        {
+            if(_characterPreview == null)
+                _characterPreview = FindAnyObjectByType<PlayerCharacterPreview>();
+
+            return _characterPreview;
+        }
+    }
+    private PlayerCharacterPreview _characterPreview;
     private UIEquipButton selectedEquipButton;
 
     public UnityEvent<EquipData> OnEquipHighlighted;
@@ -21,19 +32,29 @@ public class UIStore : MonoBehaviour
     private void SwitchSelectedEquipBtn(UIEquipButton btn)
     {
         //Restore character display
+        CharacterPreview.RestoreCurrentEquipment();
+
         selectedEquipButton = btn;
-        
+        buyButton.gameObject.SetActive(false);
+
         if (btn != null)
         {
-            buyButton.gameObject.SetActive(true);
-            buyButton.interactable = CurrencyManager.CurrentCoin >= btn.LinkedEquip.Value;
+            if(!btn.Owned)
+            {
+                buyButton.gameObject.SetActive(true);
+                buyButton.interactable = CurrencyManager.CurrentCoin >= btn.LinkedEquip.Value;
+                
+            }
+            else
+            {
+                PlayerData.Instance.UseEquip(btn.LinkedEquip);
+            }
 
+            CharacterPreview.TryEquipment(btn.LinkedEquip);
             OnEquipHighlighted.Invoke(btn.LinkedEquip);
+           
         }
-        else
-        {
-            buyButton.gameObject.SetActive(false);
-        }
+
     }
 
     public void BuyEquip()
@@ -41,6 +62,7 @@ public class UIStore : MonoBehaviour
         CurrencyManager.ChangeCoins(-selectedEquipButton.LinkedEquip.Value);
         selectedEquipButton.SetButtonBougth();
 
-        PlayerData.Instance.AcquireNewItem(selectedEquipButton.LinkedEquip);
+        PlayerData.Instance.AcquireNewEquip(selectedEquipButton.LinkedEquip);
+        buyButton.gameObject.SetActive(false);
     }
 }

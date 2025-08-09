@@ -5,6 +5,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
+using GameEconomy;
 
 /// <summary>
 /// The PlayerData script works as some kind of local server
@@ -22,14 +23,17 @@ public class PlayerData : Singleton<PlayerData>
 
     public List<EquipData> CurrentEquips => currentEquips;
     public List<string> OwnedEquipIds => ownedEquips_Address;
+    public List<string> CurrentEquipIds => currentEquips_Address;
 
     private const string OwnedDataKey = "OWNED_EQUIPS";
     private const string CurrentDataKey = "CURRENT_EQUIPS";
+    private const string MoneyDataKey = "CURRENT_MONEY";
 
 
     protected override void Awake()
     {
         base.Awake();
+        DontDestroyOnLoad(gameObject);
         LoadData();
     }
 
@@ -37,6 +41,7 @@ public class PlayerData : Singleton<PlayerData>
     {
         PlayerPrefs.SetString(OwnedDataKey, JsonConvert.SerializeObject(ownedEquips_Address));
         PlayerPrefs.SetString(CurrentDataKey, JsonConvert.SerializeObject(currentEquips_Address));
+        PlayerPrefs.SetInt(MoneyDataKey, CurrencyManager.CurrentCoin);
     }
 
     public void LoadData()
@@ -55,23 +60,10 @@ public class PlayerData : Singleton<PlayerData>
             ownedEquips_Address = JsonConvert.DeserializeObject<string[]>(PlayerPrefs.GetString(OwnedDataKey, "")).ToList();
             currentEquips_Address = JsonConvert.DeserializeObject<string[]>(PlayerPrefs.GetString(CurrentDataKey, "")).ToList();
 
-            currentEquips.Clear();
-            foreach(string currentEquipId in currentEquips_Address)
-            {
-                var awaitable = AddressLoadControl.Instance.LoadAssetAsync(EquipmentUtils.GetItemAddress(currentEquipId), (so) =>
-                {
-                    if (so is EquipData equip)
-                    {
-                        currentEquips.Add(equip);
-                    }
-                    else
-                    {
-                        Debug.LogError("There is an impostor in the save file");
-                    }
-                });
-            }
+           
         }
-
+        CurrencyManager.ChangeCoins(PlayerPrefs.GetInt(MoneyDataKey, 2000));
+        LoadCurrentEquips();
 
     }
 
@@ -84,7 +76,7 @@ public class PlayerData : Singleton<PlayerData>
         }
     }
 
-    public async Awaitable HasItemAsync(string ID, Action<bool> callback)
+    public async Awaitable HasEquipAsync(string ID, Action<bool> callback)
     {
         bool has = false;
         
@@ -103,10 +95,17 @@ public class PlayerData : Singleton<PlayerData>
         callback.Invoke(has);
     }
 
-    public void AcquireNewItem(EquipData data)
+    public void AcquireNewEquip(EquipData data)
     {
         ownedEquips_Address.Add(data.ID);
 
+        UseEquip(data);
+
+        SaveData();
+    }
+
+    public void UseEquip(EquipData data)
+    {
         EquipData oldItem = currentEquips.Find(x => x.Visual.EquipType == data.Visual.EquipType);
         CurrentEquips.Remove(oldItem);
         currentEquips.Add(data);
@@ -116,8 +115,25 @@ public class PlayerData : Singleton<PlayerData>
         {
             currentEquips_Address.Add(currentEquip.ID);
         }
+    }
 
-        SaveData();
+    private void LoadCurrentEquips()
+    {
+        currentEquips.Clear();
+        foreach (string currentEquipId in currentEquips_Address)
+        {
+            var awaitable = AddressLoadControl.Instance.LoadAssetAsync(EquipmentUtils.GetItemAddress(currentEquipId), (so) =>
+            {
+                if (so is EquipData equip)
+                {
+                    currentEquips.Add(equip);
+                }
+                else
+                {
+                    Debug.LogError("There is an impostor in the save file");
+                }
+            });
+        }
     }
 
 }

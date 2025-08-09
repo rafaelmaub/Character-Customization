@@ -82,7 +82,7 @@ public class UIEquipsDisplay : MonoBehaviour
             newEquip.OnEquipmentButtonClicked += OnAnyEquipSelected;
 
 
-            var awaitable = PlayerData.Instance.HasItemAsync(equip.ID, (has) =>
+            var awaitable = PlayerData.Instance.HasEquipAsync(equip.ID, (has) =>
             {
                 if(has)
                 {
