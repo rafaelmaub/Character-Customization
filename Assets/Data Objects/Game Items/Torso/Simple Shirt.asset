@@ -19,7 +19,7 @@ MonoBehaviour:
   visual:
     equipMesh: {fileID: -1716110407043338123, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
     materials:
-    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: e8c4de8af0a074d478f33577b1765783, type: 2}
     customColor: 1
     equipType: 5
   _id: Torso/Simple Shirt

@@ -19,7 +19,7 @@ MonoBehaviour:
   visual:
     equipMesh: {fileID: -6201006056128192083, guid: 61c9a85b18292954790fded86a08f24e, type: 3}
     materials:
-    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: 281c73a47d7370d46a672d585f9ea789, type: 2}
     customColor: 1
     equipType: 5
   _id: Torso/Tank Top (F)

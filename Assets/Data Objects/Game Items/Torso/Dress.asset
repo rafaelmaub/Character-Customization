@@ -19,7 +19,7 @@ MonoBehaviour:
   visual:
     equipMesh: {fileID: 4545171529854758045, guid: b7bb9efc083a4a54288b3537e9e60264, type: 3}
     materials:
-    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: c79f912cb41fa144489e76731c10af7f, type: 2}
     customColor: 1
     equipType: 5
   _id: Torso/Dress

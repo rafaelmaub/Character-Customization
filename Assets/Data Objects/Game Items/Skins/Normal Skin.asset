@@ -19,7 +19,7 @@ MonoBehaviour:
   visual:
     equipMesh: {fileID: -3752837355321727987, guid: c1d82f755fdad724abf19ae9beed1056, type: 3}
     materials:
-    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: 602fa1ad7f2a5184bb268cde0d1f4d30, type: 2}
     customColor: 1
     equipType: 4
   _id: Skins/Normal Skin

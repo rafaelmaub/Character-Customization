@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class NetworkCharacterInfo : NetworkBehaviour
 {
@@ -24,24 +25,33 @@ public class NetworkCharacterInfo : NetworkBehaviour
             }
             
         }
+        else
+        {
+            LoadEquipList();
+        }
 
         if(IsServer)
         {
-            transform.position = Random.onUnitSphere * 3f;
+            transform.position = new Vector3(Random.Range(-2f, 2f), Random.Range(0f, 1f), Random.Range(-3f, 1f));
         }
 
     }
 
     private void Equips_OnListChanged(NetworkListEvent<FixedString64Bytes> changeEvent)
     {
-        var awaitable = AddressLoadControl.Instance.LoadAssetAsync(EquipmentUtils.GetItemAddress(changeEvent.Value.ConvertToString()), so => 
+        LoadSingleEquip(changeEvent.Value);
+    }
+
+    private void LoadSingleEquip(FixedString64Bytes id)
+    {
+        var awaitable = AddressLoadControl.Instance.LoadAssetAsync(EquipmentUtils.GetItemAddress(id.ConvertToString()), so =>
         {
-            if(so is EquipData equip)
+            if (so is EquipData equip)
             {
                 EquipData oldEquipData = loadedEquipData.Find(item => item.Visual.EquipType == equip.Visual.EquipType);
                 if (oldEquipData)
                 {
-                    loadedEquipData.Remove(oldEquipData);                   
+                    loadedEquipData.Remove(oldEquipData);
                 }
 
                 loadedEquipData.Add(equip);
@@ -50,6 +60,18 @@ public class NetworkCharacterInfo : NetworkBehaviour
         });
     }
 
+    private void LoadEquipList()
+    {
+        if(equips.Count <= 0)
+        {
+            return;
+        }
+
+        foreach(FixedString64Bytes id in equips)
+        {
+            LoadSingleEquip(id);
+        }
+    }
 
 
     /// <summary>

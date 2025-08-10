@@ -19,7 +19,7 @@ MonoBehaviour:
   visual:
     equipMesh: {fileID: 9126489784988749842, guid: 2c191350d02032d4da4ac04c80416174, type: 3}
     materials:
-    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: eaa58822cf4b28146b31100e98b3ccad, type: 2}
     customColor: 0
     equipType: 0
   _id: Hair/Long Hair

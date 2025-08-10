@@ -16,4 +16,13 @@ public class CharacterEquipper : MonoBehaviour
             }
         }
     }
+
+    public void HideAllBodyParts(bool setHidden)
+    {
+        foreach (CharacterBodyPart part in bodyParts)
+        {
+            part.gameObject.SetActive(!setHidden);
+
+        }
+    }
 }

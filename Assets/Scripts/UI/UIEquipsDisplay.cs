@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class UIEquipsDisplay : MonoBehaviour
@@ -11,10 +12,12 @@ public class UIEquipsDisplay : MonoBehaviour
     [SerializeField] private UIEquipsTabsControl tabControl;
     [SerializeField] private LoadAssetFilter displayFilter;
 
-
+    private CancellationTokenSource cts;
     private List<UIEquipButton> spawnedButtons = new List<UIEquipButton>();
 
     public Action<UIEquipButton> OnAnyEquipSelected;
+
+
 
     private void Awake()
     {
@@ -32,7 +35,15 @@ public class UIEquipsDisplay : MonoBehaviour
 
     private IEnumerator LoadEquipsCoroutine(ListData data)
     {
-        Awaitable asyncHandler = AddressLoadControl.Instance.LoadAssetsAsync(data.ListContent, SpawnEquipButton);
+        if(cts != null)
+        {
+            cts.Cancel();
+            cts.Dispose();
+        }
+
+        cts = new CancellationTokenSource();
+
+        Awaitable latestAsyncHandler = AddressLoadControl.Instance.LoadAssetsAsync(data.ListContent, SpawnEquipButton, cts.Token);
 
         //Filter the display of items depending on an Enum
         //Could maybe be done with a more complex system of filters and conditions (Limited Edition equips, Owned, Not Owned, Rare/Common/Legendary equips)
@@ -52,12 +63,12 @@ public class UIEquipsDisplay : MonoBehaviour
 
         //Display Load/Download Icon somewhere in canvas
 
-        while(!asyncHandler.IsCompleted)
+        while(!latestAsyncHandler.IsCompleted)
         {
             if(spawnedButtons.Count > 10)
             {
-                Debug.Log("Reached limit, wait for another request");
-                yield return new WaitUntil(() => asyncHandler.IsCompleted);
+                //Debug.Log("Reached limit, wait for another request");
+                //yield return new WaitUntil(() => latestAsyncHandler.IsCompleted);
                 //NOTE: I want to put some sort of pause for the async operation when it reaches a certain amount of items spawned
                 //The system would wait for the player to scroll all the way down before continuing with the display
                 //Probably use the scroll bar value as reference
@@ -67,6 +78,7 @@ public class UIEquipsDisplay : MonoBehaviour
             yield return null;
         }
 
+        latestAsyncHandler = null;
         //Hide Load Icon to indicate there are no more loading to be done
     }
 
@@ -96,6 +108,7 @@ public class UIEquipsDisplay : MonoBehaviour
 
     private void CleanDisplay()
     {
+
         StopAllCoroutines();
 
         foreach (UIEquipButton btn in spawnedButtons)
@@ -103,6 +116,7 @@ public class UIEquipsDisplay : MonoBehaviour
             btn.OnEquipmentButtonClicked -= OnAnyEquipSelected;
             Destroy(btn.gameObject);
         }
+        
 
         spawnedButtons.Clear();
     }

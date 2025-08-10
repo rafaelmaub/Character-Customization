@@ -19,7 +19,7 @@ MonoBehaviour:
   visual:
     equipMesh: {fileID: -6932478202874304102, guid: 10ab6d36cac4464479ac44803e100221, type: 3}
     materials:
-    - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: 405e4f83bfaf5854bba3af952534e07a, type: 2}
     customColor: 1
     equipType: 5
   _id: Torso/Long Sleeve Shirt

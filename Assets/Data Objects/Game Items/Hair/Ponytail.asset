@@ -20,6 +20,7 @@ MonoBehaviour:
     equipMesh: {fileID: -6885527757345157577, guid: c42a28d149464a34c89bff92f343800d, type: 3}
     materials:
     - {fileID: 2100000, guid: aa14d742d3b57ab4b8a245e335cfe15a, type: 2}
+    - {fileID: 2100000, guid: 126ba3885587d6946bfdad5603ce9bbb, type: 2}
     customColor: 0
     equipType: 0
   _id: Hair/Ponytail
