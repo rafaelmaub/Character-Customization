@@ -65,4 +65,14 @@ public class UIStore : MonoBehaviour
         PlayerData.Instance.AcquireNewEquip(selectedEquipButton.LinkedEquip);
         buyButton.gameObject.SetActive(false);
     }
+
+
+    public void UnloadAssets()
+    {
+        equipDisplay.CleanDisplay();
+
+        AddressLoadControl.Instance.NotReleaseHandle(PlayerData.Instance.CurrentEquipIds);
+
+        Resources.UnloadUnusedAssets();
+    }
 }

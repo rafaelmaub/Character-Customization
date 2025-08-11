@@ -12,9 +12,29 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 974853431245692745, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1925171619346159901, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204957533063526246, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958000616124420575, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258762852763858395, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379091741842294340, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5824297355370726952, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,13 +76,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5831714325325539968, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5893075932575787127, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6136196511508626928, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6602241021360135314, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
       propertyPath: m_Name
       value: NetworkCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953025104863592982, guid: 6c468a46c1e15ae4ea3c711d65f8c197, type: 3}
+      propertyPath: currentData
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

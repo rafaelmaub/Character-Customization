@@ -106,7 +106,7 @@ public class UIEquipsDisplay : MonoBehaviour
 
     }
 
-    private void CleanDisplay()
+    public void CleanDisplay()
     {
 
         StopAllCoroutines();
@@ -114,6 +114,7 @@ public class UIEquipsDisplay : MonoBehaviour
         foreach (UIEquipButton btn in spawnedButtons)
         {
             btn.OnEquipmentButtonClicked -= OnAnyEquipSelected;
+
             Destroy(btn.gameObject);
         }
         

@@ -29,6 +29,7 @@ public class PlayerData : Singleton<PlayerData>
     private const string CurrentDataKey = "CURRENT_EQUIPS";
     private const string MoneyDataKey = "CURRENT_MONEY";
 
+    public Action OnEquipsFullyLoaded;
 
     protected override void Awake()
     {
@@ -60,9 +61,11 @@ public class PlayerData : Singleton<PlayerData>
             ownedEquips_Address = JsonConvert.DeserializeObject<string[]>(PlayerPrefs.GetString(OwnedDataKey, "")).ToList();
             currentEquips_Address = JsonConvert.DeserializeObject<string[]>(PlayerPrefs.GetString(CurrentDataKey, "")).ToList();
 
-           
+            CurrencyManager.ChangeCoins(PlayerPrefs.GetInt(MoneyDataKey));
+
         }
-        CurrencyManager.ChangeCoins(PlayerPrefs.GetInt(MoneyDataKey, 2000));
+
+        
         LoadCurrentEquips();
 
     }
@@ -74,6 +77,8 @@ public class PlayerData : Singleton<PlayerData>
             currentEquips_Address.Add(current.ID);
             ownedEquips_Address.Add(current.ID);
         }
+
+        CurrencyManager.ChangeCoins(PlayerPrefs.GetInt(MoneyDataKey, 2000));
     }
 
     public async Awaitable HasEquipAsync(string ID, Action<bool> callback)
@@ -127,12 +132,19 @@ public class PlayerData : Singleton<PlayerData>
                 if (so is EquipData equip)
                 {
                     currentEquips.Add(equip);
+
+                    if(currentEquips.Count == currentEquips_Address.Count)
+                    {
+                        //Finished
+                        OnEquipsFullyLoaded?.Invoke();
+                    }
                 }
                 else
                 {
                     Debug.LogError("There is an impostor in the save file");
                 }
             });
+            
         }
     }
 

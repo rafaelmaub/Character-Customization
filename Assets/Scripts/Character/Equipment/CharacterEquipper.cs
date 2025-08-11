@@ -12,9 +12,13 @@ public class CharacterEquipper : MonoBehaviour
             if(part.IsItemCompatible(data))
             {
                 part.ChangeEquipment(data);
+                Debug.Log("equipped " + data.EquipName);
                 return;
             }
+            
         }
+
+        Debug.LogError("Not able to equip " + data.name);
     }
 
     public void HideAllBodyParts(bool setHidden)

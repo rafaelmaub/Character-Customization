@@ -1,14 +1,14 @@
 using UnityEngine;
 using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
 
 public class UINetworkManager : MonoBehaviour
 {
     [SerializeField] private UIScreen screen;
+    [SerializeField] private GameObject gameplayScreen;
     public void StartHost_Btn()
     {
         screen.Hide();
-
+        gameplayScreen.SetActive(true);
         NetworkManager.Singleton.StartHost();
         
     }
@@ -16,20 +16,35 @@ public class UINetworkManager : MonoBehaviour
     public void FindMatch_Btn()
     {
         screen.Hide();
-
-        NetworkManager.Singleton.OnClientStarted += () =>
+        gameplayScreen.SetActive(true);
+        NetworkManager.Singleton.OnClientDisconnectCallback += (id) =>
         {
-            if(!NetworkManager.Singleton.IsConnectedClient)
+            if(id == NetworkManager.Singleton.LocalClientId)
             {
-                NetworkManager.Singleton.Shutdown();
-                Debug.LogWarning("No matches found, try hosting a private match");
-                screen.Show();
+                ExitGame_Btn();
             }
-            
         };
 
         NetworkManager.Singleton.StartClient();
 
         
+    }
+
+    public void ExitGame_Btn()
+    {
+        NetworkManager.Singleton.Shutdown();
+        gameplayScreen.SetActive(false);
+        screen.Show();
+    }
+
+    public void ResetProgress_Btn()
+    {
+        PlayerPrefs.DeleteAll();
+        QuitApplication_Btn();
+    }
+    public void QuitApplication_Btn()
+    {
+        
+        Application.Quit();
     }
 }
